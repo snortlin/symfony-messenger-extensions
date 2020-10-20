@@ -1,0 +1,22 @@
+{
+    "name": "snortlin//symfony-messenger-extensions",
+    "description": "Symfony Messenger Extensions",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        { "name": "Petr Leixner", "email": "snortlin@volny.cz" }
+    ],
+    "require": {
+        "php": "^7.4",
+        "ramsey/uuid": "^4.0",
+        "symfony/messenger": "^5.0|^5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Snortlin\\SymfonyMessengerExtensions\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
