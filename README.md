@@ -1,11 +1,5 @@
 # Snortlin/Symfony Messenger Extensions
 
-[![Source Code][badge-source]][source]
-[![Latest Version][badge-release]][release]
-[![Software License][badge-license]][license]
-[![PHP Version][badge-php]][php]
-
-
 ## Installation
 
 The preferred method of installation is via [Composer][]. Run the following
@@ -13,7 +7,7 @@ command to install the package and add it as a requirement to your project's
 `composer.json`:
 
 ```bash
-composer require snortlin//symfony-messenger-extensions
+composer require snortlin/symfony-messenger-extensions
 ```
 
 ## Usage
