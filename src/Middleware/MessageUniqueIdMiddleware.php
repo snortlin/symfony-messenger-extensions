@@ -2,8 +2,8 @@
 
 namespace Snortlin\SymfonyMessengerExtensions\Middleware;
 
-use App\Messenger\Event\MessageUniqueIdEvent;
-use App\Messenger\Stamp\UniqueIdStamp;
+use Snortlin\SymfonyMessengerExtensions\Event\MessageUniqueIdEvent;
+use Snortlin\SymfonyMessengerExtensions\Stamp\UniqueIdStamp;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\Messenger\Envelope;
 use Symfony\Component\Messenger\Middleware\MiddlewareInterface;

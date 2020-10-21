@@ -2,7 +2,7 @@
 
 namespace Snortlin\SymfonyMessengerExtensions\EventSubscriber;
 
-use App\Messenger\Stamp\UniqueIdStamp;
+use Snortlin\SymfonyMessengerExtensions\Stamp\UniqueIdStamp;
 use Symfony\Component\Messenger\Event\WorkerMessageFailedEvent;
 use Symfony\Component\VarDumper\Cloner\VarCloner;
 use Symfony\Component\VarDumper\Dumper\HtmlDumper;
