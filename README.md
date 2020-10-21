@@ -26,7 +26,7 @@ services:
             - { name: kernel.event_listener, event: Symfony\Component\Messenger\Event\WorkerMessageFailedEvent }
 ```
 
-### Messenger error dump listener
+### Message UniqueId
 ```yaml
 # /config/packages/messenger.yaml
 framework:

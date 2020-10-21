@@ -1,5 +1,5 @@
 {
-    "name": "snortlin//symfony-messenger-extensions",
+    "name": "snortlin/symfony-messenger-extensions",
     "description": "Symfony Messenger Extensions",
     "type": "library",
     "license": "MIT",
