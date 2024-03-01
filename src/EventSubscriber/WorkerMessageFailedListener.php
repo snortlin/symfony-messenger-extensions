@@ -1,22 +1,23 @@
-<?php declare(strict_types=1);
+<?php
+declare(strict_types=1);
 
 namespace Snortlin\SymfonyMessengerExtensions\EventSubscriber;
 
-use Ramsey\Uuid\Uuid;
 use Snortlin\SymfonyMessengerExtensions\Stamp\UniqueIdStamp;
 use Symfony\Component\Messenger\Event\WorkerMessageFailedEvent;
+use Symfony\Component\Uid\Uuid;
 use Symfony\Component\VarDumper\Cloner\VarCloner;
 use Symfony\Component\VarDumper\Dumper\HtmlDumper;
 
-class WorkerMessageFailedListener
+readonly class WorkerMessageFailedListener
 {
-    public function __construct(private readonly string $messengerLogDirectory, private readonly bool $logRetryableMessages = false)
+    public function __construct(private string $messengerLogDirectory,
+                                private bool   $logRetryableMessages = false)
     {
     }
 
     /**
      * @param WorkerMessageFailedEvent $event
-     * @throws \ErrorException
      */
     public function __invoke(WorkerMessageFailedEvent $event): void
     {
@@ -47,7 +48,7 @@ class WorkerMessageFailedListener
         try {
             $checksum = $uniqueIdStamp?->getUniqueId() ?? md5(serialize($envelope->getMessage()));
         } catch (\Throwable) {
-            $checksum = Uuid::uuid4()->toString();
+            $checksum = Uuid::v4()->toRfc4122();
         }
 
         $filename = sprintf(

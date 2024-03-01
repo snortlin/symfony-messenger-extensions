@@ -1,4 +1,5 @@
-<?php declare(strict_types=1);
+<?php
+declare(strict_types=1);
 
 namespace Snortlin\SymfonyMessengerExtensions\Middleware;
 
@@ -11,9 +12,9 @@ use Symfony\Component\Messenger\Middleware\StackInterface;
 use Symfony\Component\Messenger\Stamp\ReceivedStamp;
 use Symfony\Component\Messenger\Stamp\SentStamp;
 
-class MessageUniqueIdMiddleware implements MiddlewareInterface
+readonly class MessageUniqueIdMiddleware implements MiddlewareInterface
 {
-    public function __construct(private readonly EventDispatcherInterface $eventDispatcher)
+    public function __construct(private EventDispatcherInterface $eventDispatcher)
     {
     }
 
